@@ -40,11 +40,8 @@ def send_update():
 # Create the Flask app
 app = Flask(__name__)
 
-# Define a route to trigger the update
-@app.route('/update')
-def update():
-    send_update()
-    return 'Update sent!'
+# Trigger the first update when the app starts
+send_update()
 
 # Schedule the update to run every 6 hours
 schedule.every(6).hours.do(send_update)
