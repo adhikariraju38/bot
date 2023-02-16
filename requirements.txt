@@ -1,4 +1,5 @@
 requests
+lxml
 pandas
 python-telegram-bot
 schedule
